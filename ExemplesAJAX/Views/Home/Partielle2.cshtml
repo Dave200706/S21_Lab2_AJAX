@@ -1,0 +1,12 @@
+﻿@model ExemplesAJAX.Views.Home.Partielle2DTO
+@{
+    Layout = null;
+}
+
+@if (Model != null)
+{
+    @for (int i = 0; i < Model.Qty; i++)
+    {
+        <p>@Model.Texte</p>
+    }
+}

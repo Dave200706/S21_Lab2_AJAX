@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Components.Forms;
+
 namespace ExemplesAJAX.Models
 {
     public class ErrorViewModel
@@ -5,5 +7,7 @@ namespace ExemplesAJAX.Models
         public string? RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+        
+        
     }
 }

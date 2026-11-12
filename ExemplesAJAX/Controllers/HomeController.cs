@@ -1,4 +1,5 @@
 using ExemplesAJAX.Models;
+using ExemplesAJAX.Views.Home;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -29,6 +30,14 @@ namespace ExemplesAJAX.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult Partielle()
+        {
+            return PartialView();
+        }
+        public IActionResult Partielle2 (Partielle2DTO modele)
+        {
+            return PartialView("Partielle2", modele);
         }
     }
 }

@@ -1,3 +1,35 @@
-﻿<p>
+﻿@section Scripts {
+    <script>
+        function maFonctionClic() {
+            var data = {
+                qty: $('#inputQty').val(),
+                texte: $('#inputTexte').val()
+            };
+
+            console.log(data);
+
+            $.get('/Home/Partielle2', data, function(reponse) {
+                $('#conteneur-partiel-2').html(reponse);
+            });
+        }
+
+        $(document).ready(function() {
+            $('#btnCharger').click(function() {
+                maFonctionClic();
+            });
+        });
+    </script>
+}
+<p>
     <b style="color: red;">Ma vue partielle!!</b>
 </p>
+<input type="text" name="number" />
+<input type="number" name="Exemple" />
+<button id="btnCharger" >AJAX avec data</button>
+
+let data = {
+    qty:x,          @* //Remplacer x par le code qui permet d'Aller chercher la valeur du input *@
+    texte:y     @* Idem *@
+    console.log(data)
+}
+
